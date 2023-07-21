@@ -6,11 +6,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  
   entry: './src/index.js',
   output: {
     filename: "js/bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: ""
+    publicPath: "", 
+    hashFunction: "xxhash64"
   },
   mode: 'production',
   module: {
